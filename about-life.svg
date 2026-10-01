@@ -1,0 +1,241 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 440" width="100%" height="100%">
+  <defs>
+    <!-- Background & Card Gradients -->
+    <linearGradient id="card-bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#090a10"/>
+      <stop offset="100%" stop-color="#0f101b"/>
+    </linearGradient>
+
+    <!-- Aurora Hairline Border Gradient -->
+    <linearGradient id="aurora-border" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#22d3ee" stop-opacity="0.6"/>
+      <stop offset="50%" stop-color="#a78bfa" stop-opacity="0.4"/>
+      <stop offset="100%" stop-color="#f472b6" stop-opacity="0.6"/>
+    </linearGradient>
+
+    <!-- Dot Matrix Pattern -->
+    <pattern id="dot-grid" x="0" y="0" width="16" height="16" patternUnits="userSpaceOnUse">
+      <circle cx="2" cy="2" r="1" fill="#ffffff" fill-opacity="0.03"/>
+    </pattern>
+
+    <!-- Glowing Filters -->
+    <filter id="glow-cyan" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="4" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+    <filter id="glow-pink" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="4" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+    <filter id="glow-violet" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="4" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+
+    <style>
+      .text-mono { font-family: 'JetBrains Mono', 'Fira Code', monospace; }
+      .text-sans { font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; }
+      
+      @keyframes blink { 0%, 100% { opacity: 1; } 50% { opacity: 0; } }
+      .cursor { animation: blink 1s infinite; }
+
+      /* Instagram Progress Bars Animation (12s total cycle) */
+      @keyframes bar1 { 0% { width: 0%; } 30% { width: 100%; } 100% { width: 100%; } }
+      @keyframes bar2 { 0%, 33% { width: 0%; } 63% { width: 100%; } 100% { width: 100%; } }
+      @keyframes bar3 { 0%, 66% { width: 0%; } 96%, 100% { width: 100%; } }
+
+      .p-bar1 { animation: bar1 12s infinite linear; }
+      .p-bar2 { animation: bar2 12s infinite linear; }
+      .p-bar3 { animation: bar3 12s infinite linear; }
+
+      /* Carousel Slide Fade */
+      @keyframes slide1 { 0%, 30% { opacity: 1; transform: translateX(0); } 33%, 100% { opacity: 0; transform: translateX(20px); } }
+      @keyframes slide2 { 0%, 33% { opacity: 0; transform: translateX(-20px); } 36%, 63% { opacity: 1; transform: translateX(0); } 66%, 100% { opacity: 0; transform: translateX(20px); } }
+      @keyframes slide3 { 0%, 66% { opacity: 0; transform: translateX(-20px); } 69%, 96% { opacity: 1; transform: translateX(0); } 100% { opacity: 0; transform: translateX(20px); } }
+
+      .slide-1 { animation: slide1 12s infinite ease-in-out; }
+      .slide-2 { animation: slide2 12s infinite ease-in-out; }
+      .slide-3 { animation: slide3 12s infinite ease-in-out; }
+
+      /* Daily Rings Loop Animation */
+      @keyframes ring-fill1 { 0% { stroke-dashoffset: 220; } 50%, 100% { stroke-dashoffset: 35; } }
+      @keyframes ring-fill2 { 0% { stroke-dashoffset: 180; } 50%, 100% { stroke-dashoffset: 25; } }
+      @keyframes ring-fill3 { 0% { stroke-dashoffset: 140; } 50%, 100% { stroke-dashoffset: 15; } }
+
+      .ring-1 { stroke-dasharray: 220; animation: ring-fill1 4s ease-out forwards; }
+      .ring-2 { stroke-dasharray: 180; animation: ring-fill2 4.5s ease-out forwards; }
+      .ring-3 { stroke-dasharray: 140; animation: ring-fill3 5s ease-out forwards; }
+    </style>
+  </defs>
+
+  <!-- Canvas Outer Background -->
+  <rect width="900" height="440" rx="16" fill="#06070a"/>
+
+  <!-- ================= LEFT CARD: WHAT I BUILD (FAKE BROWSER WINDOW) ================= -->
+  <g transform="translate(15, 15)">
+    <!-- Card Frame -->
+    <rect width="425" height="410" rx="14" fill="url(#card-bg)"/>
+    <rect width="425" height="410" rx="14" fill="url(#dot-grid)"/>
+    <rect width="423" height="408" x="1" y="1" rx="13" fill="none" stroke="url(#aurora-border)" stroke-width="1.2"/>
+
+    <!-- Fake Browser Window Bar -->
+    <g transform="translate(0, 0)">
+      <path d="M0 14 C0 6.2 6.2 0 14 0 H411 C418.8 0 425 6.2 425 14 V42 H0 Z" fill="#131522"/>
+      <line x1="0" y1="42" x2="425" y2="42" stroke="#ffffff" stroke-opacity="0.08" stroke-width="1"/>
+
+      <!-- Window Control Buttons -->
+      <circle cx="20" cy="21" r="5.5" fill="#ff5f56"/>
+      <circle cx="36" cy="21" r="5.5" fill="#ffbd2e"/>
+      <circle cx="52" cy="21" r="5.5" fill="#27c93f"/>
+
+      <!-- URL Address Bar -->
+      <g transform="translate(75, 9)">
+        <rect width="330" height="24" rx="6" fill="#0a0b12" stroke="#ffffff" stroke-opacity="0.08" stroke-width="1"/>
+        <!-- Lock Icon -->
+        <path d="M12 11 V9 C12 7.3 13.3 6 15 6 C16.7 6 18 7.3 18 9 V11 M10 11 H20 V17 H10 Z" fill="none" stroke="#22d3ee" stroke-width="1.2"/>
+        <text x="28" y="16" class="text-mono" font-size="11" fill="#94a3b8">https://tazim.dev/workspace <tspan class="cursor" fill="#22d3ee">█</tspan></text>
+      </g>
+    </g>
+
+    <!-- Card Header Title -->
+    <g transform="translate(24, 66)">
+      <text x="0" y="0" class="text-mono" font-size="12" font-weight="700" fill="#22d3ee" letter-spacing="1.5">⚡ WHAT I BUILD</text>
+      <text x="0" y="20" class="text-sans" font-size="18" font-weight="800" fill="#ffffff">Engineering Core Systems</text>
+    </g>
+
+    <!-- 3 Capability Rows with Glowing Icon Tiles -->
+    <g transform="translate(24, 115)">
+      <!-- Capability 1 -->
+      <g transform="translate(0, 0)">
+        <rect width="377" height="82" rx="10" fill="#141727" stroke="#22d3ee" stroke-opacity="0.2" stroke-width="1"/>
+        <!-- Icon Tile -->
+        <rect x="14" y="14" width="54" height="54" rx="8" fill="#0c1929" stroke="#22d3ee" stroke-width="1.2"/>
+        <text x="41" y="48" font-size="24" text-anchor="middle">⚡</text>
+        <!-- Content -->
+        <text x="82" y="34" class="text-sans" font-size="15" font-weight="700" fill="#f8fafc">AI Code Intelligence &amp; IDEs</text>
+        <text x="82" y="55" class="text-sans" font-size="12" fill="#94a3b8">Monaco Web IDEs, AST analysis &amp; copilot engines</text>
+      </g>
+
+      <!-- Capability 2 -->
+      <g transform="translate(0, 96)">
+        <rect width="377" height="82" rx="10" fill="#141727" stroke="#a78bfa" stroke-opacity="0.2" stroke-width="1"/>
+        <!-- Icon Tile -->
+        <rect x="14" y="14" width="54" height="54" rx="8" fill="#19152b" stroke="#a78bfa" stroke-width="1.2"/>
+        <text x="41" y="48" font-size="24" text-anchor="middle">🚀</text>
+        <!-- Content -->
+        <text x="82" y="34" class="text-sans" font-size="15" font-weight="700" fill="#f8fafc">Full-Stack SaaS Platforms</text>
+        <text x="82" y="55" class="text-sans" font-size="12" fill="#94a3b8">Node.js, Express, React, Vite &amp; Cloud Microservices</text>
+      </g>
+
+      <!-- Capability 3 -->
+      <g transform="translate(0, 192)">
+        <rect width="377" height="82" rx="10" fill="#141727" stroke="#f472b6" stroke-opacity="0.2" stroke-width="1"/>
+        <!-- Icon Tile -->
+        <rect x="14" y="14" width="54" height="54" rx="8" fill="#241220" stroke="#f472b6" stroke-width="1.2"/>
+        <text x="41" y="48" font-size="24" text-anchor="middle">🔒</text>
+        <!-- Content -->
+        <text x="82" y="34" class="text-sans" font-size="15" font-weight="700" fill="#f8fafc">Security &amp; Automated SAST</text>
+        <text x="82" y="55" class="text-sans" font-size="12" fill="#94a3b8">Real-time static vulnerability scanning &amp; redaction</text>
+      </g>
+    </g>
+
+    <!-- Bottom Status Bar -->
+    <g transform="translate(24, 382)">
+      <text x="0" y="0" class="text-mono" font-size="11" fill="#64748b">git main* | 0 errors | 100% TypeScript/JS</text>
+    </g>
+  </g>
+
+  <!-- ================= RIGHT CARD: HOBBIES & LIFESTYLE ================= -->
+  <g transform="translate(460, 15)">
+    <!-- Card Frame -->
+    <rect width="425" height="410" rx="14" fill="url(#card-bg)"/>
+    <rect width="425" height="410" rx="14" fill="url(#dot-grid)"/>
+    <rect width="423" height="408" x="1" y="1" rx="13" fill="none" stroke="url(#aurora-border)" stroke-width="1.2"/>
+
+    <!-- Instagram-Style Segmented Progress Bars (Top) -->
+    <g transform="translate(24, 20)">
+      <!-- Segment 1 Track & Fill -->
+      <rect x="0" y="0" width="118" height="4" rx="2" fill="#1e293b"/>
+      <rect x="0" y="0" width="118" height="4" rx="2" fill="#22d3ee" class="p-bar1" filter="url(#glow-cyan)"/>
+
+      <!-- Segment 2 Track & Fill -->
+      <rect x="128" y="0" width="118" height="4" rx="2" fill="#1e293b"/>
+      <rect x="128" y="0" width="118" height="4" rx="2" fill="#a78bfa" class="p-bar2" filter="url(#glow-violet)"/>
+
+      <!-- Segment 3 Track & Fill -->
+      <rect x="256" y="0" width="118" height="4" rx="2" fill="#1e293b"/>
+      <rect x="256" y="0" width="118" height="4" rx="2" fill="#f472b6" class="p-bar3" filter="url(#glow-pink)"/>
+    </g>
+
+    <!-- Card Header Title -->
+    <g transform="translate(24, 52)">
+      <text x="0" y="0" class="text-mono" font-size="12" font-weight="700" fill="#a78bfa" letter-spacing="1.5">🎨 HOBBIES &amp; LIFESTYLE</text>
+      <text x="0" y="20" class="text-sans" font-size="18" font-weight="800" fill="#ffffff">Beyond The Code</text>
+    </g>
+
+    <!-- Carousel Container (Crossfading Slides) -->
+    <g transform="translate(24, 102)">
+      <!-- Slide 1: Music & Synthesizers -->
+      <g class="slide-1">
+        <rect width="377" height="150" rx="12" fill="#141829" stroke="#22d3ee" stroke-opacity="0.3" stroke-width="1"/>
+        <text x="20" y="40" font-size="32">🎸</text>
+        <text x="65" y="38" class="text-sans" font-size="17" font-weight="800" fill="#22d3ee">Synthwave &amp; Audio Crafting</text>
+        <text x="20" y="78" class="text-sans" font-size="13" fill="#cbd5e1">Designing electronic soundscapes, vintage synth patches</text>
+        <text x="20" y="98" class="text-sans" font-size="13" fill="#cbd5e1">&amp; ambient production tracks during deep focus sessions.</text>
+        <rect x="20" y="114" width="110" height="22" rx="4" fill="#0e2433"/><text x="28" y="129" class="text-mono" font-size="11" fill="#38bdf8">#AudioEngine</text>
+        <rect x="138" y="114" width="90" height="22" rx="4" fill="#0e2433"/><text x="146" y="129" class="text-mono" font-size="11" fill="#38bdf8">#Modular</text>
+      </g>
+
+      <!-- Slide 2: Specialty Coffee -->
+      <g class="slide-2" opacity="0">
+        <rect width="377" height="150" rx="12" fill="#1c162b" stroke="#a78bfa" stroke-opacity="0.3" stroke-width="1"/>
+        <text x="20" y="40" font-size="32">☕</text>
+        <text x="65" y="38" class="text-sans" font-size="17" font-weight="800" fill="#a78bfa">Specialty Espresso Crafting</text>
+        <text x="20" y="78" class="text-sans" font-size="13" fill="#cbd5e1">Dialing in precise extractions, single-origin roasts</text>
+        <text x="20" y="98" class="text-sans" font-size="13" fill="#cbd5e1">&amp; perfecting pour-over ratios for peak developer flow.</text>
+        <rect x="20" y="114" width="100" height="22" rx="4" fill="#241a3d"/><text x="28" y="129" class="text-mono" font-size="11" fill="#c084fc">#Espresso</text>
+        <rect x="128" y="114" width="110" height="22" rx="4" fill="#241a3d"/><text x="136" y="129" class="text-mono" font-size="11" fill="#c084fc">#Pourover</text>
+      </g>
+
+      <!-- Slide 3: Tech Travel & Sci-Fi -->
+      <g class="slide-3" opacity="0">
+        <rect width="377" height="150" rx="12" fill="#291526" stroke="#f472b6" stroke-opacity="0.3" stroke-width="1"/>
+        <text x="20" y="40" font-size="32">✈️</text>
+        <text x="65" y="38" class="text-sans" font-size="17" font-weight="800" fill="#f472b6">Tech Travel &amp; Sci-Fi Literature</text>
+        <text x="20" y="78" class="text-sans" font-size="13" fill="#cbd5e1">Attending global software summits, exploring tech hubs</text>
+        <text x="20" y="98" class="text-sans" font-size="13" fill="#cbd5e1">&amp; reading cyberpunk &amp; speculative AI novels.</text>
+        <rect x="20" y="114" width="110" height="22" rx="4" fill="#3b1734"/><text x="28" y="129" class="text-mono" font-size="11" fill="#f472b6">#TechSummits</text>
+        <rect x="138" y="114" width="90" height="22" rx="4" fill="#3b1734"/><text x="146" y="129" class="text-mono" font-size="11" fill="#f472b6">#SciFi</text>
+      </g>
+    </g>
+
+    <!-- Bottom Section: 3 DAILY RINGS (Activity / Code / Mind) -->
+    <g transform="translate(24, 275)">
+      <text x="0" y="0" class="text-mono" font-size="12" font-weight="700" fill="#cbd5e1" letter-spacing="1">⭕ DAILY PROGRESS RINGS</text>
+
+      <!-- Ring 1: Coding Flow (Cyan) -->
+      <g transform="translate(45, 65)">
+        <circle cx="0" cy="0" r="35" fill="none" stroke="#1e293b" stroke-width="7"/>
+        <circle cx="0" cy="0" r="35" fill="none" stroke="#22d3ee" stroke-width="7" stroke-linecap="round" class="ring-1" transform="rotate(-90)" filter="url(#glow-cyan)"/>
+        <text x="0" y="4" class="text-mono" font-size="13" font-weight="800" fill="#22d3ee" text-anchor="middle">95%</text>
+        <text x="0" y="52" class="text-sans" font-size="11" font-weight="600" fill="#94a3b8" text-anchor="middle">Coding</text>
+      </g>
+
+      <!-- Ring 2: System Architecture (Violet) -->
+      <g transform="translate(188, 65)">
+        <circle cx="0" cy="0" r="35" fill="none" stroke="#1e293b" stroke-width="7"/>
+        <circle cx="0" cy="0" r="35" fill="none" stroke="#a78bfa" stroke-width="7" stroke-linecap="round" class="ring-2" transform="rotate(-90)" filter="url(#glow-violet)"/>
+        <text x="0" y="4" class="text-mono" font-size="13" font-weight="800" fill="#a78bfa" text-anchor="middle">88%</text>
+        <text x="0" y="52" class="text-sans" font-size="11" font-weight="600" fill="#94a3b8" text-anchor="middle">Architecture</text>
+      </g>
+
+      <!-- Ring 3: Learning & AI (Pink) -->
+      <g transform="translate(330, 65)">
+        <circle cx="0" cy="0" r="35" fill="none" stroke="#1e293b" stroke-width="7"/>
+        <circle cx="0" cy="0" r="35" fill="none" stroke="#f472b6" stroke-width="7" stroke-linecap="round" class="ring-3" transform="rotate(-90)" filter="url(#glow-pink)"/>
+        <text x="0" y="4" class="text-mono" font-size="13" font-weight="800" fill="#f472b6" text-anchor="middle">92%</text>
+        <text x="0" y="52" class="text-sans" font-size="11" font-weight="600" fill="#94a3b8" text-anchor="middle">AI Research</text>
+      </g>
+    </g>
+  </g>
+</svg>
