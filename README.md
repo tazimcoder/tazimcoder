@@ -1,29 +1,29 @@
 <div align="center">
 
-  <!-- STEP 1: HERO ANIMATED BANNER -->
+  <!-- STEP 1: HERO ANIMATED BANNER (WITH REAL GITHUB PROFILE PHOTO & NO OVERLAPS) -->
   <a href="https://github.com/tazimcoder">
-    <img src="./hero.svg?v=2" alt="Tazim Kassar - Full-Stack Architect &amp; AI Developer" width="100%" />
+    <img src="./hero.svg?v=3" alt="Tazim Kassar - Full-Stack Architect &amp; AI Developer" width="100%" />
   </a>
 
   <br/><br/>
 
-  <!-- STEP 2: ABOUT & LIFESTYLE -->
+  <!-- STEP 2: ABOUT & LIFESTYLE (WITH REAL PROFILE BADGE) -->
   <a href="https://github.com/tazimcoder">
-    <img src="./about-life.svg?v=2" alt="What I Build &amp; Lifestyle" width="100%" />
+    <img src="./about-life.svg?v=3" alt="What I Build &amp; Lifestyle" width="100%" />
   </a>
 
   <br/><br/>
 
-  <!-- STEP 3: TECH ORBIT & STACK -->
+  <!-- STEP 3: TECH ORBIT & STACK (WITH REAL AVATAR NUCLEUS) -->
   <a href="https://github.com/tazimcoder">
-    <img src="./stack.svg?v=2" alt="Tech Stack Ecosystem &amp; Orbits" width="100%" />
+    <img src="./stack.svg?v=3" alt="Tech Stack Ecosystem &amp; Orbits" width="100%" />
   </a>
 
   <br/><br/>
 
-  <!-- STEP 4: ID BADGE & DASHBOARD -->
+  <!-- STEP 4: ID BADGE & DASHBOARD (WITH SWINGING REAL AVATAR BADGE) -->
   <a href="https://github.com/tazimcoder">
-    <img src="./id-dashboard.svg?v=2" alt="Developer ID Badge &amp; Live Telemetry" width="100%" />
+    <img src="./id-dashboard.svg?v=3" alt="Developer ID Badge &amp; Live Telemetry" width="100%" />
   </a>
 
 </div>
@@ -75,15 +75,15 @@
   <h2>🏙️ 3D Contribution City</h2>
   <p><i>Rebuilt daily via GitHub Actions with 3D Night Skyline View</i></p>
   <a href="https://github.com/tazimcoder">
-    <img src="./profile-3d-contrib/profile-night-view.svg?v=2" alt="Tazim's 3D Contribution City" width="100%" />
+    <img src="./profile-3d-contrib/profile-night-view.svg?v=3" alt="Tazim's 3D Contribution City" width="100%" />
   </a>
 </div>
 
 <br/>
 
-<!-- STEP 7: CONNECT FOOTER -->
+<!-- STEP 7: CONNECT FOOTER (WITH REAL AVATAR STICKER) -->
 <div align="center">
   <a href="https://github.com/tazimcoder">
-    <img src="./connect.svg?v=2" alt="Connect with Tazim Kassar" width="100%" />
+    <img src="./connect.svg?v=3" alt="Connect with Tazim Kassar" width="100%" />
   </a>
 </div>
